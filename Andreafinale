@@ -42,8 +42,8 @@ dati=what.data
 
     
 
-
-
+numero=np.linspace(0,1,bins)
+dati['età']=pd.cut(dati['age_parent'],bins=bins,labels=numero)
 
 dati.groupby('età')['M_ass'].hist(alpha=0.5)
 
