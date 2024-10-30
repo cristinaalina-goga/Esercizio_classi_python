@@ -1,30 +1,48 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Wed Oct 23 14:44:56 2024
-
-@author: bosca
-"""
-
-import pandas as pd
 import numpy as np
-from matplotlib import pyplot as plt
-import matplotlib.colors as mcolors
+import matplotlib.pyplot as plt
+import scipy.optimize as sopt 
+
+nomefile='nome_del_tuo_file'
 
 
-...............
-io creo la classe
-...........................
-
-#chiamer√≤ il dataframe 'dati'  colonna 1='M_ass' ,colonna  2='b-y', colonna 3='age_parent'
-
+#...........
+#io faccio classe
+#salvo il dataframe in 'dati'
+#...........
 
 
-............................
-crea grafico con colormap
-...........................
 
-#dividi in 10 intervalli che chiamerai bins
 
-......................
-faccio isogramma
-......................
+#........
+#fai grafico con colormap, usa pd.cut e aggiungi una colonna che chiami 'et‡' con il numero di intervallo al dataframe 'dati' 
+#........
+
+#...
+#faccio istogramma
+#...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
