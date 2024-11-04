@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Created on Wed Oct 23 14:44:56 2024
+Created on Wed Oct 30 15:17:50 2024
 
 @author: bosca
 """
@@ -11,20 +11,46 @@ from matplotlib import pyplot as plt
 import matplotlib.colors as mcolors
 
 
-...............
-io creo la classe
-...........................
 
-#chiamerò il dataframe 'dati'  colonna 1='M_ass' ,colonna  2='b-y', colonna 3='age_parent'
+nomefile='COME HAI NOMINATO IL FILE AD ES:Nemo_6670.dat'
 
 
+class readdf:
+    
+    def __init__(self,nomefile):
+        
+        self.nome=nomefile
+        self.data = None
+    
+    
+    def read_file(self):
+        try:
+            self.data=pd.read_csv(self.nome, sep=' ')
+        except FileNotFoundError:
+            print(f"Errore: Il file '{self.file_path}' non è stato trovato.")
+        except pd.errors.EmptyDataError:
+            print("Errore: Il file è vuoto.")
+        except pd.errors.EmptyDataError:
+            print("Errore: C'è un problema di formattazione con il file.")
+    
+    def show_head(self, n=5):
+       """Mostra le prime n righe del DataFrame."""
+       if self.data is not None:
+           print(self.data.head(n))
+       else:
+           print("Errore: Il file non è stato ancora caricato.")
+    
+    
 
-............................
-crea grafico con colormap
-...........................
+what=readdf(nomefile)
+what.read_file()
+    
+dati=what.data
 
-#dividi in 10 intervalli che chiamerai bins
+    
 
-......................
-faccio isogramma
-......................
+
+
+
+dati.groupby('età')['M_ass'].hist(alpha=0.5)
+
