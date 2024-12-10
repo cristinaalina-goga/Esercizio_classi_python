@@ -59,3 +59,4 @@ what.read_file()
 
 dati=what.data
 numero=np.linspace(0,1,Nbins)
+what.colormap_plot()
